@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+body {
+background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 43%;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+    border-right: 1px solid black;
+    width: 150px;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    color: whitesmoke;
+  }
+
+  header .menu {
+    text-align: center;
+  }
+
+  li a, .menu1 {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+  li.menu {
+    display: inline-block;
+    font-size: 75px;
+    font-family: 'Major Mono Display', monospace;
+  }
+
+  .contenu-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .contenu-menu a {
+    font-size: 25px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .contenu-menu a:hover {
+      color: whitesmoke;
+    }
+
+  .menu:hover .contenu-menu {
+    display: block;
+  }
+
+  .menu a {
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    color: white;
+  }
+
+  .contenu-menu a:hover {
+    border-bottom: 1px solid greenyellow;
+}
+
+#formulaire {
+    margin-top: 0;
+}
+
+.words {
+    color: rgba(42, 180, 42, 0.493);
+    font-size: 0;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 0;
+  }
+  
+  .words span {
+    font-size: 5rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(-30%, 0);
+    }
+    50% {
+      text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+      transform: translate(30%, 0);
+    }
+  }
+  
+  .words span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .words span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .words span:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  .words span:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+  .words span:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+  
+  .words span:nth-child(7) {
+    animation-delay: 3s;
+  }
