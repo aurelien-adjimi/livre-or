@@ -37,22 +37,27 @@ exit;
    </head>
    <body>
    <header>
-   <nav>
+        <nav>
         <ul>
       <li class="menu" style="float:left">
         <a href="javascript:void(0)" class="menu1">Menu</a>
         <div class="contenu-menu">  
+          <?php 
+          
+          if(isset($_SESSION['login'])) {
+          echo ' <a href="./profil.php">Profil</a>';
+          echo '<a href="./commentaire.php">Commentaires</a>';
+        }
+          ?>
           <a href="./index.php">Accueil</a>
           <a href="./inscription.php">Inscription</a>
           <a href="./connexion.php">Connexion</a>
-          <a href="./profil.php">Profil</a>
           <a href="./livre-or.php">Livre d'Or</a>
-          <a href="./commentaire.php">Commentaires</a>
         </div>
       </li>
         </ul>
         </nav>
-</header>
+    </header>
 <main>
    <div id="form">
    <form action="" method="post" align="center">
@@ -76,10 +81,9 @@ exit;
       </form>
    </div>
 </main>   
-            <?php 
-            if($login == 'admin') {
-               echo '<a style="background-color: black;" href="./admin.php">Page Admin</a>';
-            }
-            ?>
    </body>
+
+   <footer>
+      
+   </footer>
 </html>

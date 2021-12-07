@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+$bdd = mysqli_connect("localhost", "root", "", "livreor");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,12 +22,17 @@
       <li class="menu" style="float:left">
         <a href="javascript:void(0)" class="menu1">Menu</a>
         <div class="contenu-menu">  
-        <a href="./index.php">Accueil</a>
+          <?php 
+          
+          if(isset($_SESSION['login'])) {
+          echo ' <a href="./profil.php">Profil</a>';
+          echo '<a href="./commentaire.php">Commentaires</a>';
+        }
+          ?>
+          <a href="./index.php">Accueil</a>
           <a href="./inscription.php">Inscription</a>
           <a href="./connexion.php">Connexion</a>
-          <a href="./profil.php">Profil</a>
           <a href="./livre-or.php">Livre d'Or</a>
-          <a href="./commentaire.php">Commentaires</a>
         </div>
       </li>
         </ul>

@@ -27,6 +27,13 @@ if (isset ($_POST['inscription'])) {
             }
     }
 }
+
+if (isset($_POST['deco'])) {
+    session_start();
+    session_destroy();
+    header('location: ./connexion.php');
+    exit;
+       }
 ?>
 
 <!DOCTYPE html>
@@ -39,22 +46,33 @@ if (isset ($_POST['inscription'])) {
 
 <body>
 <header>
-<nav>
+        <nav>
         <ul>
       <li class="menu" style="float:left">
         <a href="javascript:void(0)" class="menu1">Menu</a>
         <div class="contenu-menu">  
+          <?php 
+          
+          if(isset($_SESSION['login'])) {
+          echo ' <a href="./profil.php">Profil</a>';
+          echo '<a href="./commentaire.php">Commentaires</a>';
+        }
+          ?>
           <a href="./index.php">Accueil</a>
           <a href="./inscription.php">Inscription</a>
           <a href="./connexion.php">Connexion</a>
-          <a href="./profil.php">Profil</a>
           <a href="./livre-or.php">Livre d'Or</a>
-          <a href="./commentaire.php">Commentaires</a>
         </div>
       </li>
         </ul>
         </nav>
-</header>
+        <?php if (isset($_SESSION['login'])) {
+        echo '<form action="" method="post">
+        <input name="deco" id="btndeco" type="submit" value="Déconnexion">
+        </form>';
+    }
+        ?>
+    </header>
 
     <main>
 
