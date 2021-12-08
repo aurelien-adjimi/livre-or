@@ -23,7 +23,7 @@ foreach($array as $key=>$value);
    if (isset($_POST['deco'])) {
 session_start();
 session_destroy();
-header('location: ./connexion.php');
+header('location: ../php/connexion.php');
 exit;
    }
    
@@ -33,7 +33,7 @@ exit;
    <head>
       <title>Profil</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="./profil.css">
+      <link rel="stylesheet" href="../asset/css/profil.css">
    </head>
    <body>
    <header>
@@ -45,14 +45,14 @@ exit;
           <?php 
           
           if(isset($_SESSION['login'])) {
-          echo ' <a href="./profil.php">Profil</a>';
-          echo '<a href="./commentaire.php">Commentaires</a>';
+          echo ' <a href="../php/profil.php">Profil</a>';
+          echo '<a href="../php/commentaire.php">Commentaires</a>';
         }
           ?>
-          <a href="./index.php">Accueil</a>
-          <a href="./inscription.php">Inscription</a>
-          <a href="./connexion.php">Connexion</a>
-          <a href="./livre-or.php">Livre d'Or</a>
+          <a href="../index.php">Accueil</a>
+          <a href="../php/inscription.php">Inscription</a>
+          <a href="../php/connexion.php">Connexion</a>
+          <a href="../php/livre-or.php">Livre d'Or</a>
         </div>
       </li>
         </ul>

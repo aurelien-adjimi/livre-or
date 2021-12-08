@@ -15,7 +15,7 @@ if(isset($_POST['formconnexion'])) {
 
 if ($mdpconnect == $value['password'] && $loginconnect == $value['login']) {
       $_SESSION['login'] = $loginconnect;
-      header ('Location: ./commentaire.php');
+      header ('Location: ../php/commentaire.php');
    }
 
    if($mdpconnect!=$value['password']) {
@@ -29,7 +29,7 @@ if ($mdpconnect == $value['password'] && $loginconnect == $value['login']) {
    <head>
       <title>Connexion</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="./connexion.css">
+      <link rel="stylesheet" href="../asset/css/connexion.css">
    </head>
    <body>
    <header>
@@ -41,14 +41,14 @@ if ($mdpconnect == $value['password'] && $loginconnect == $value['login']) {
           <?php 
           
           if(isset($_SESSION['login'])) {
-          echo ' <a href="./profil.php">Profil</a>';
-          echo '<a href="./commentaire.php">Commentaires</a>';
+          echo ' <a href="../php/profil.php">Profil</a>';
+          echo '<a href="../php/commentaire.php">Commentaires</a>';
         }
           ?>
-          <a href="./index.php">Accueil</a>
-          <a href="./inscription.php">Inscription</a>
-          <a href="./connexion.php">Connexion</a>
-          <a href="./livre-or.php">Livre d'Or</a>
+          <a href="../index.php">Accueil</a>
+          <a href="../php/inscription.php">Inscription</a>
+          <a href="../php/connexion.php">Connexion</a>
+          <a href="../php/livre-or.php">Livre d'Or</a>
         </div>
       </li>
         </ul>
