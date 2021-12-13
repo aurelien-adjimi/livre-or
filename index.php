@@ -49,6 +49,8 @@ $bdd = mysqli_connect("localhost", "root", "", "livreor");
   </div>
 </div>
     </main>
-    
+    <footer>
+    <button><a href="//github.com/aurelien-adjimi/livre-or.git">github</a>
+    </footer>
 </body>
 </html>

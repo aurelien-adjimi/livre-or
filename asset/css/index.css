@@ -168,3 +168,12 @@ ul {
       0 0 100px rgb(93, 167, 22),
       0 0 150px rgb(93, 167, 22);
   }
+
+  footer {
+    margin-top: 15%;
+  }
+
+  footer button {
+    font-size: 25px;
+    text-decoration: none;
+  }

@@ -13,6 +13,7 @@ $id=$res2[0]['id'];
 if (isset($_SESSION['login']) && isset($_POST['envoyer'])) {
     $text = addslashes($_POST['textarea']);
     $req = mysqli_query($bdd, "INSERT INTO commentaires(commentaire, id_utilisateur, date) VALUES ('$text','$id',NOW())");
+    header('location: ../php/livre-or.php');
 }
 
 if (isset($_POST['deco'])) {

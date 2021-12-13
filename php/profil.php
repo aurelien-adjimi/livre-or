@@ -15,6 +15,9 @@ foreach($array as $key=>$value);
       $mdp = $_POST['password1'];
       $pw = $_POST['password2'];
       $req=mysqli_query($bdd, "UPDATE utilisateurs SET login ='$log', password= '$mdp' WHERE login= '$login'");
+      $_SESSION['login'] = $_POST['login'];
+      $_SESSION['password1'] = $_POST['password1'];
+      header('refresh: 0,');
       if($mdp != $pw) {
          echo 'Mot de passe différents';
       }

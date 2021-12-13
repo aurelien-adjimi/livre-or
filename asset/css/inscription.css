@@ -91,3 +91,12 @@ ul {
 color: whitesmoke;
 margin-top: 18%;
 }
+
+footer {
+  margin-top: 15%;
+}
+
+footer button {
+  font-size: 25px;
+  text-decoration: none;
+}

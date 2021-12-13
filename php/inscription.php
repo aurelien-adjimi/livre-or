@@ -19,7 +19,7 @@ if (isset ($_POST['inscription'])) {
     }   
         if ($password == $password2) {
             mysqli_query($bdd,$sql);
-            header ('Location: ../connexion.php');
+            header ('Location: ../php/connexion.php');
             }
             
             if ($password != $password2) {
